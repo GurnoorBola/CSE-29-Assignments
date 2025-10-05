@@ -1,6 +1,3 @@
-TODO: write your answers for the design questions here
-
-
 ## Another encoding of Unicode is UTF-32, which encodes all Unicode code points in 4 bytes. For things like ASCII, the leading 3 bytes are all 0's. What are some tradeoffs between UTF-32 and UTF-8?  
 
 A benefit to encoding Unicode this way is that it makes it much more simple to
