@@ -18,8 +18,7 @@ The leading 10 is useful because it makes it clear where a starting byte for a
 codepoint is. If we allow continuation bytes to not have the "01" prefix there
 is a chance that the byte could have the same prefix as a starting byte even
 though it is a continuation byte. Something that could go wrong if the encoding
-didnt include this restriction is if a computer crashes, and when it restarts
-it start reading from where it stopped reading, it won't know if the current
+didnt include this restriction is if a input stream corrputs, and the computer continues reading from where it stopped, it won't know if the current
 byte it is reading is a starting byte or a continuation byte. This would cause
 unknown behavior. Overall removing the "10" overcomplicates a lot of scenarios
 and can cause parsing errors when decoding.  
